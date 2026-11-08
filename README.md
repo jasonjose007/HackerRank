@@ -1,6 +1,6 @@
 # HackerRank Solutions
 
-> 📊 **Stats:** 208 solved | 67% acceptance rate
+> 📊 **Stats:** 216 solved | 68% acceptance rate
 
 Daily practice solutions in Python.
 
@@ -14,7 +14,7 @@ Daily practice solutions in Python.
 ### HackerRank
 | Difficulty | Solved |
 |------------|--------|
-| 🟢 Easy | 12 |
+| 🟢 Easy | 13 |
 | 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
-| **Total** | **14** |
+| **Total** | **15** |
