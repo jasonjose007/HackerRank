@@ -15,6 +15,6 @@ Daily practice solutions in Python.
 | Difficulty | Solved |
 |------------|--------|
 | 🟢 Easy | 42 |
-| 🟡 Medium | 29 |
+| 🟡 Medium | 30 |
 | 🔴 Hard | 0 |
-| **Total** | **71** |
+| **Total** | **72** |
