@@ -14,7 +14,7 @@ Daily practice solutions in Python.
 ### HackerRank
 | Difficulty | Solved |
 |------------|--------|
-| 🟢 Easy | 43 |
+| 🟢 Easy | 44 |
 | 🟡 Medium | 33 |
 | 🔴 Hard | 0 |
-| **Total** | **76** |
+| **Total** | **77** |
