@@ -3,20 +3,35 @@
 # Difficulty: Medium
 # Topics: Algorithms
 
-2 \times 4 = 8$.
-            Value of $P_2 = 1 \times (6) = 6$.
-            Total value of split = $8 + 6 = 14$.
-        3.  $[1], [3, 6]$: two pieces $P_1 = [1], P_2 = [3, 6]$.
-            Value of $P_1 = 1 \times (1) = 1$.
-            Value of $P_2 = 2 \times (3+6) = 2 \times 9 = 18$.
-            Total value of split = $1 + 18 = 19$.
-        4.  $[1], [3], [6]$: three pieces $P_1 = [1], P_2 = [3], P_3 = [6]$.
-            Value of $P_1 = 1 \times 1 = 1$.
-            Value of $P_2 = 1 \times 3 = 3$.
-            Value of $P_3 = 1 \times 6 = 6$.
-            Total value of split = $1 + 3 + 6 = 10$.
-        Sum of total values = $30 + 14 + 19 + 10 = 73$.
-        Matches the sample output.
+import sys
 
-    *   Wait, let's re-verify the number of splits.
-        For $n
+def solve():
+    input_data = sys.stdin.read().split()
+    if not input_data:
+        return
+    
+    n = int(input_data[0])
+    a = list(map(int, input_data[1:]))
+    
+    if n == 0:
+        print(0)
+        return
+    
+    MOD = 10**9 + 7
+    
+    pow2 = [1] * (n + 1)
+    for i in range(1, n + 1):
+        pow2[i] = (pow2[i-1] * 2) % MOD
+        
+    total_sum = 0
+    three_pow2_n_minus_1 = (3 * pow2[n-1]) % MOD
+    
+    for i in range(n):
+        # Ci = 3 * 2^(n-1) - 2^i - 2^(n-i-1)
+        ci = (three_pow2_n_minus_1 - pow2[i] - pow2[n-i-1]) % MOD
+        total_sum = (total_sum + a[i] * ci) % MOD
+        
+    print(total_sum)
+
+if __name__ == '__main__':
+    solve()
